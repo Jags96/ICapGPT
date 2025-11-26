@@ -1,4 +1,4 @@
-EPOCH = 20
+EPOCH = 2
 ANNOTATION_JSON = "/N/u/jkatama/BigRed200/BLIP/annotations_trainval2014/annotations/captions_train2014.json"
 IMAGE_ROOT = "/N/u/jkatama/BigRed200/BLIP/train2014/train2014"
 BATCH_SIZE = 128
