@@ -1,7 +1,7 @@
 EPOCH = 2
 ANNOTATION_JSON = "/N/u/jkatama/BigRed200/BLIP/annotations_trainval2014/annotations/captions_train2014.json"
 IMAGE_ROOT = "/N/u/jkatama/BigRed200/BLIP/train2014/train2014"
-BATCH_SIZE = 128
+BATCH_SIZE = 32
 LR = 5e-5
 
 
@@ -92,7 +92,7 @@ class COCOCaptionDataset(Dataset):
         
         # Flatten annotations
         self.samples = []
-        for item in self.data['annotations']:
+        for item in tqdm(self.data['annotations']):
             img_id = item['image_id']
             # Find image filename
             img_info = next(img for img in self.data['images'] if img['id'] == img_id)
